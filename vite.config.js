@@ -8,6 +8,10 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  test: {
+    globals: true,
+    setupFiles: 'src/setupTests.js'
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
